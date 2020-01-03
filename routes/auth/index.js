@@ -1,5 +1,10 @@
 const router = require('express').Router()
 const AuthController = require('../../controllers/auth/index')
-router.get('/login',AuthController.login.Post)
-router.get('/register',AuthController.register.Post)
+const Validator = require('../../validations/auth')
+router.post('/login',Validator.Login, AuthController.login.Post)
+router.post('/register', Validator.Register,AuthController.register.Post)
+router.get('/verify',AuthController.register.VerifyCode)
+router.post("/forgot",AuthController.forgot.Forgot)
+router.post('/reset-check',AuthController.forgot.ResetCheck)
+router.post('/reset',AuthController.forgot.ResetChange)
 module.exports = router
