@@ -16,7 +16,7 @@
     "express-validator": "^6.3.0",
     "helmet": "^3.21.2",
     "host-validation": "^2.0.1",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "mongo-sanitize": "^1.0.1",
     "mongoose": "^5.7.7",
     "nodemailer": "^6.4.2",
